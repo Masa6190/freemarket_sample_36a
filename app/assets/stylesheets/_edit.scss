@@ -1,489 +1,489 @@
-.header-n{
-    background-color: #EEEEEE;
-    width: 1440px;
-    height: 128px;
-    text-align: center;
-     &-logo{
-       margin-top: 30px;
-       height: 49px;
-       width: 185px;
+// .header-n{
+//     background-color: #EEEEEE;
+//     width: 1440px;
+//     height: 128px;
+//     text-align: center;
+//      &-logo{
+//        margin-top: 30px;
+//        height: 49px;
+//        width: 185px;
        
-     }
-  }
+//      }
+//   }
   
-  .item{
-    background-color: #EEEEEE;
-    width: 1440px;
-    height: 2328px;
+//   .item{
+//     background-color: #EEEEEE;
+//     width: 1440px;
+//     height: 2328px;
    
-     &-image{
-       background-color: white;
-       width: 700px;
-       height: 300px;
-       display: block;
-       margin-left: auto;
-       margin-right: auto;
-        &-title{
-          padding-left: 30px;
-          padding-top: 20px;
-           &-body-name{
-             font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-             display: flex;
-             font-size: 14px;
-              &-b{
-                margin-left: 20px;
-                background-color: red;
-                color: white;
+    //  &-image{
+    //    background-color: white;
+    //    width: 700px;
+    //    height: 300px;
+    //    display: block;
+    //    margin-left: auto;
+    //    margin-right: auto;
+    //     &-title{
+    //       padding-left: 30px;
+    //       padding-top: 20px;
+        //    &-body-name{
+        //      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+        //      display: flex;
+        //      font-size: 14px;
+        //       &-b{
+        //         margin-left: 20px;
+        //         background-color: red;
+        //         color: white;
   
-           }
-          }
+        //    }
+        //   }
   
-           &-text{
-             margin-top: 10px;
-             font-size: 14px;
-             font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-           }
+        //    &-text{
+        //      margin-top: 10px;
+        //      font-size: 14px;
+        //      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+        //    }
   
-           &-box{
-             text-align: center;
-             margin-top: 10px;
+        //    &-box{
+        //      text-align: center;
+        //      margin-top: 10px;
              
   
-              &-input{
-                margin-left: auto;
-                align-items: center;
-                font-size: 14px;
-                margin: 0 auto;
-                padding-top: 40px;
-                width: 95%;
-                height: 150px;
-                background-color: #f5f5f5;
-                border-style: dotted;
-                border-color: gray;
-                  #previews{
-                    display: flex;
-                      item-image-title-box-input-1-c{
-                        flex-wrap: wrap;
-                    }
-                  }
+            //   &-input{
+            //     margin-left: auto;
+            //     align-items: center;
+            //     font-size: 14px;
+            //     margin: 0 auto;
+            //     padding-top: 40px;
+            //     width: 95%;
+            //     height: 150px;
+            //     background-color: #f5f5f5;
+            //     border-style: dotted;
+            //     border-color: gray;
+            //       #previews{
+            //         display: flex;
+            //           item-image-title-box-input-1-c{
+            //             flex-wrap: wrap;
+            //         }
+            //       }
   
                 
   
-                 &-1-c{
-                  flex-wrap: wrap;
-                 }
-                 &-1-d{
-                   display: none;
-                 }
+    //              &-1-c{
+    //               flex-wrap: wrap;
+    //              }
+    //              &-1-d{
+    //                display: none;
+    //              }
   
-              }
+    //           }
   
-              &-input-2{
+    //           &-input-2{
   
-              }
-           }
+    //           }
+    //        }
   
-        }
-     }
+    //     }
+    //  }
   
-     &-name{
-       background-color: white;
-       width: 700px;
-       height: 416px;
-       margin-top: 5px;
-       display: block;
-       margin-left: auto;
-       margin-right: auto;
+    //  &-name{
+    //    background-color: white;
+    //    width: 700px;
+    //    height: 416px;
+    //    margin-top: 5px;
+    //    display: block;
+    //    margin-left: auto;
+    //    margin-right: auto;
   
-        &-title{
-          padding-left: 30px;
-          padding-top: 20px;
+    //     &-title{
+    //       padding-left: 30px;
+    //       padding-top: 20px;
   
-           &-a-text-body{
-             display: flex;
-             font-size: 14px;
-             font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-              &-1{
+    //        &-a-text-body{
+    //          display: flex;
+    //          font-size: 14px;
+    //          font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    //           &-1{
   
-              }
+    //           }
   
-              &-2{
-                margin-left: 10px;
-                background-color: red;
-                color: white;
-              }
+    //           &-2{
+    //             margin-left: 10px;
+    //             background-color: red;
+    //             color: white;
+    //           }
            
-           }
+        //    }
         
-           &-a-field{
+        //    &-a-field{
           
-              &-text{
-                margin-top: 20px;
-                width: 620px;
-                height: 48px;
-                border-radius: 10px;
-             }
+        //       &-text{
+        //         margin-top: 20px;
+        //         width: 620px;
+        //         height: 48px;
+        //         border-radius: 10px;
+        //      }
   
   
-        }
-           &-b-text-body{
-             margin-top: 20px;
-             font-size: 14px;
-             font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-             display: flex;
-              &-1{
+        // }
+        //    &-b-text-body{
+        //      margin-top: 20px;
+        //      font-size: 14px;
+        //      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+        //      display: flex;
+        //       &-1{
   
-              }
+        //       }
   
-              &-2{
-                margin-left: 10px;
-                background-color: red;
-                color: white;
-              }
-           }
+        //       &-2{
+        //         margin-left: 10px;
+        //         background-color: red;
+        //         color: white;
+        //       }
+        //    }
   
-           &-b-field{ 
+        //    &-b-field{ 
              
   
-              &-text{
-                margin-top: 20px;
-                width: 620px;
-                height: 154px;
-                border-radius: 10px;
-              }
-         }
+    //           &-text{
+    //             margin-top: 20px;
+    //             width: 620px;
+    //             height: 154px;
+    //             border-radius: 10px;
+    //           }
+    //      }
   
-      }
-     }
+    //   }
+    //  }
   
   // カテゴリーの子要素のセレクト画面の調整
-  #children_wrapper{
-    margin-left: 0px;
-    margin-top: 20px;
-  }
+//   #children_wrapper{
+//     margin-left: 0px;
+//     margin-top: 20px;
+//   }
   
-  // カテゴリーの孫要素のセレクト画面の調整
-  #grandchildren_wrapper{
-    margin-left: 0px;
-    margin-top: 20px;
+//   // カテゴリーの孫要素のセレクト画面の調整
+//   #grandchildren_wrapper{
+//     margin-left: 0px;
+//     margin-top: 20px;
   
-  }
+//   }
   
-  // カテゴリーの親要素のセレクト画面の調整
-  .item-specific-title-body-a-field-box-text-down{
-    display: none;
+//   // カテゴリーの親要素のセレクト画面の調整
+//   .item-specific-title-body-a-field-box-text-down{
+//     display: none;
   
-  }
+//   }
   
-  // カテゴリーの子・孫要素のセレクト画面の調整
-  .fas.fa-chevron-down.item-specific-title-body-a-field-text-down{
-    display: none;
-  }
+//   // カテゴリーの子・孫要素のセレクト画面の調整
+//   .fas.fa-chevron-down.item-specific-title-body-a-field-text-down{
+//     display: none;
+//   }
   
-     &-specific{
-       background-color: white;
-       width: 700px;
-       height: 644px;
-       margin-top: 5px;
-       display: block;
-       margin-left: auto;
-       margin-right: auto;
-        &-title{
-         padding-left: 30px;
-         padding-top: 20px;
-          &-text{
-            color: #888888;
-          }
+    //  &-specific{
+    //    background-color: white;
+    //    width: 700px;
+    //    height: 644px;
+    //    margin-top: 5px;
+    //    display: block;
+    //    margin-left: auto;
+    //    margin-right: auto;
+    //     &-title{
+    //      padding-left: 30px;
+    //      padding-top: 20px;
+    //       &-text{
+    //         color: #888888;
+    //       }
   
-          &-body-a-text{
+    //       &-body-a-text{
            
-            margin-top: 20px;
-            font-size: 14px;
-            font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+            // margin-top: 20px;
+            // font-size: 14px;
+            // font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
             
             
-             &-2{
-              margin-left: 10px;
-              background-color: red;
-              color: white;
-             }
+            //  &-2{
+            //   margin-left: 10px;
+            //   background-color: red;
+            //   color: white;
+            //  }
   
           
   
-          }
+        //   }
   
-          &-body-a-field-box{
-            margin-top: 20px;
-            width: 620px;
-            height: 48px;
-             &-text{
-              width: 620px;
-              height: 48px;
-             }
-          }
+        //   &-body-a-field-box{
+        //     margin-top: 20px;
+        //     width: 620px;
+        //     height: 48px;
+        //      &-text{
+        //       width: 620px;
+        //       height: 48px;
+        //      }
+        //   }
   
-          &-body-b-text{
-            display: flex;
-            margin-top: 40px;
-            font-size: 14px;
-            font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-             &-2{
-              margin-left: 10px;
-              background-color:gray;
-              color: white;
-             }
+        //   &-body-b-text{
+        //     display: flex;
+        //     margin-top: 40px;
+        //     font-size: 14px;
+        //     font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+        //      &-2{
+        //       margin-left: 10px;
+        //       background-color:gray;
+        //       color: white;
+        //      }
   
-          }
+        //   }
   
-          &-body-b-field{
-            margin-top: 20px;
-            width: 620px;
-            height: 48px;
-             &-text{
-              width: 620px;
-              height: 48px;
-              border-radius: 10px;
-             }
-          }
+        //   &-body-b-field{
+        //     margin-top: 20px;
+        //     width: 620px;
+        //     height: 48px;
+        //      &-text{
+        //       width: 620px;
+        //       height: 48px;
+        //       border-radius: 10px;
+        //      }
+        //   }
   
-          &-body-c-text{
-            display: flex;
-            margin-top: 20px;
-            font-size: 14px;
-            font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-             &-2{
-              margin-left: 10px;
-              background-color: red;
-              color: white;
-             }
+        //   &-body-c-text{
+        //     display: flex;
+        //     margin-top: 20px;
+        //     font-size: 14px;
+        //     font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+        //      &-2{
+        //       margin-left: 10px;
+        //       background-color: red;
+        //       color: white;
+        //      }
   
-          }
-  
-          
-          &-body-c-field{
-            margin-top: 20px;
-            width: 620px;
-            height: 48px;
-             &-text{
-              width: 620px;
-              height: 48px;
-             }
-          }
-  
+        //   }
   
           
-      }
-    }
-     &-delivery{
-       background-color: white;
-       width: 700px;
-       height: 444px;
-       margin-top: 5px;
-       display: block;
-       margin-left: auto;
-       margin-right: auto;
-        &-title{
-         padding-left: 30px;
-         padding-top: 20px;
-          &-text{
-            color: #888888;
-          }
-  
-          &-body-text{
-            display: flex;
-            font-size: 14px;
-            font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-            margin-top: 20px;
-             &-2{
-              margin-left: 10px;
-              background-color: red;
-              color: white;
-             }
-          }
+        //   &-body-c-field{
+        //     margin-top: 20px;
+        //     width: 620px;
+        //     height: 48px;
+        //      &-text{
+        //       width: 620px;
+        //       height: 48px;
+        //      }
+        //   }
   
   
-          &-body-field{
-            margin-top: 20px;
-            width: 620px;
-            height: 48px;
-             &-text{
-              width: 620px;
-              height: 48px;
-             }
-          }
-       }
-      }
+          
+    //   }
+    // }
+    //  &-delivery{
+    //    background-color: white;
+    //    width: 700px;
+    //    height: 444px;
+    //    margin-top: 5px;
+    //    display: block;
+    //    margin-left: auto;
+    //    margin-right: auto;
+    //     &-title{
+    //      padding-left: 30px;
+    //      padding-top: 20px;
+    //       &-text{
+    //         color: #888888;
+    //       }
+  
+    //       &-body-text{
+    //         display: flex;
+    //         font-size: 14px;
+    //         font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    //         margin-top: 20px;
+    //          &-2{
+    //           margin-left: 10px;
+    //           background-color: red;
+    //           color: white;
+    //          }
+    //       }
+  
+  
+    //       &-body-field{
+    //         margin-top: 20px;
+    //         width: 620px;
+    //         height: 48px;
+    //          &-text{
+    //           width: 620px;
+    //           height: 48px;
+    //          }
+    //       }
+    //    }
+    //   }
     
-     &-price{
-       background-color: white;
-       width: 700px;
-       height: 150px;
-       margin-top: 5px;
-       display: block;
-       margin-left: auto;
-       margin-right: auto;
-        &-title{
-          padding-left: 30px;
-          padding-top: 20px;
-           &-text-a{
-             color: #888888;
-           }
+    //  &-price{
+    //    background-color: white;
+    //    width: 700px;
+    //    height: 150px;
+    //    margin-top: 5px;
+    //    display: block;
+    //    margin-left: auto;
+    //    margin-right: auto;
+    //     &-title{
+    //       padding-left: 30px;
+    //       padding-top: 20px;
+    //        &-text-a{
+    //          color: #888888;
+    //        }
   
-           &-text-b{
+    //        &-text-b{
              
-             display: flex;
-             justify-content: space-between;
-             margin-top: 20px; 
-             margin-right: 20px;
-              &-body{
-                display: flex;
-                 &-2{
-                   background-color: red ;
-                   color: white;
-                   margin-left: 20px;
-                   height: 21px;
+            //  display: flex;
+            //  justify-content: space-between;
+            //  margin-top: 20px; 
+            //  margin-right: 20px;
+            //   &-body{
+            //     display: flex;
+            //      &-2{
+            //        background-color: red ;
+            //        color: white;
+            //        margin-left: 20px;
+            //        height: 21px;
                    
-                }
-                 &-3{
-                   margin-left: 200px;
-                 }
-              }
+            //     }
+            //      &-3{
+            //        margin-left: 200px;
+            //      }
+            //   }
               
-              &-field{
-                margin-right: 20px;
-                 &-text{
-                   width: 285px;
-                   height: 48px;
-                  }
-              }
+    //           &-field{
+    //             margin-right: 20px;
+    //              &-text{
+    //                width: 285px;
+    //                height: 48px;
+    //               }
+    //           }
       
-            }
-         }
-      }
+    //         }
+    //      }
+    //   }
   
-     &-profit{
-       background-color: white;
-       width: 700px;
-       height: 402px;
-       display: block;
-       margin-left: auto;
-       margin-right: auto;
-        &-title{
-          padding-left: 30px;
-          padding-top: 20px;
-           &-box-a{ 
-             display: flex;
+    //  &-profit{
+    //    background-color: white;
+    //    width: 700px;
+    //    height: 402px;
+    //    display: block;
+    //    margin-left: auto;
+    //    margin-right: auto;
+    //     &-title{
+    //       padding-left: 30px;
+    //       padding-top: 20px;
+    //        &-box-a{ 
+    //          display: flex;
              
-              &-text{
-                font-size: 14px;
-                font-family: Arial;
-              }
+        //       &-text{
+        //         font-size: 14px;
+        //         font-family: Arial;
+        //       }
   
-              .right_bar{
-                margin-left: 210px; 
-              }
-          }
+        //       .right_bar{
+        //         margin-left: 210px; 
+        //       }
+        //   }
            
-           &-box-b{
-            display: flex;
-             &-text{
-               margin-top: 20px;
-               font-size: 14px;
-               font-family: Arial;
+        //    &-box-b{
+        //     display: flex;
+        //      &-text{
+        //        margin-top: 20px;
+        //        font-size: 14px;
+        //        font-family: Arial;
                 
-              }
-             .right_bar_2{
-               margin-top: 20px;
-               margin-left: 260px; 
-            }
+            //   }
+            //  .right_bar_2{
+            //    margin-top: 20px;
+            //    margin-left: 260px; 
+            // }
   
               
   
-          }
-           &-input{
-             margin-top: 50px;
-             text-align: center;
+        //   }
+        //    &-input{
+        //      margin-top: 50px;
+        //      text-align: center;
            
-              &-1-field{
-                background-color: red;
-                color: white;
-                width: 360px;
-                height: 48px;
+            //   &-1-field{
+            //     background-color: red;
+            //     color: white;
+            //     width: 360px;
+            //     height: 48px;
   
-              }
+            //   }
   
-              &-2-field{
-                margin-top: 20px;
-                background-color: gray;
-                color: black;
-                width: 360px;
-                height: 48px;
+            //   &-2-field{
+        //         margin-top: 20px;
+        //         background-color: gray;
+        //         color: black;
+        //         width: 360px;
+        //         height: 48px;
   
-              }
+        //       }
   
-              &-3{
-                color: lightblue;
-               }
-              }
+        //       &-3{
+        //         color: lightblue;
+        //        }
+        //       }
   
-          &-body-1{
-            margin-top: 20px;
-            font-size: 12px;
-            font-family: Arial;
-            text-align: center;
-             &-2{
-               color: blue;
-               }
-            }
+        //   &-body-1{
+        //     margin-top: 20px;
+        //     font-size: 12px;
+        //     font-family: Arial;
+        //     text-align: center;
+        //      &-2{
+        //        color: blue;
+        //        }
+        //     }
   
           
-      }
+//       }
     
-     }
-   }
+//      }
+//    }
   
   
   
-  .footer-n{
-    width: 1440px;
-    height: 220px;
-    margin: 0 auto;
-    padding: 40px 0;
-    text-align: center;
-    background-color: #EEEEEE;
+//   .footer-n{
+//     width: 1440px;
+//     height: 220px;
+//     margin: 0 auto;
+//     padding: 40px 0;
+//     text-align: center;
+//     background-color: #EEEEEE;
   
-    &__menu {
-      height: 15px;
-      font-size: 12px;
-      color: #333333;
+    // &__menu {
+    //   height: 15px;
+    //   font-size: 12px;
+    //   color: #333333;
   
-      &--privacy {
-        color: #333333;
-      }
+    //   &--privacy {
+    //     color: #333333;
+    //   }
   
-      &--terms {
-        color: #333333;
-        margin-left: 16px;
-      }
+    //   &--terms {
+    //     color: #333333;
+    //     margin-left: 16px;
+    //   }
   
-      &--notation {
-        color: #333333;
-        margin-left: 16px;
-      }
-    }
+    //   &--notation {
+    //     color: #333333;
+    //     margin-left: 16px;
+    //   }
+    // }
   
-    &__mark {
-      margin: 40px auto 0;
+    // &__mark {
+    //   margin: 40px auto 0;
       
-      &--logo {
-        width: 100px;
-        height: 60px;
-      } 
-    }
+//       &--logo {
+//         width: 100px;
+//         height: 60px;
+//       } 
+//     }
   
-    &__name {
-      font-size: 13px;
-      color: #333333;
-      margin-left: 6px;
-    }
-  }
+//     &__name {
+//       font-size: 13px;
+//       color: #333333;
+//       margin-left: 6px;
+//     }
+//   }
