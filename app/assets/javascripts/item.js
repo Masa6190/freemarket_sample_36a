@@ -19,10 +19,12 @@ $(document).on('turbolinks:load', ()=> {
   fileIndex.splice(0, lastIndex);
 
   $('.hidden-destroy').hide();
+
   $('#image-box').on('change', '.is-file', function(e) {
     
     const targetIndex = $(this).parent().data('index');
     const file = e.target.files[0];
+    console.log(file)
     const blobUrl = window.URL.createObjectURL(file);
     
     if (img = $(`img[data-index="${targetIndex}"]`)[0]) {
