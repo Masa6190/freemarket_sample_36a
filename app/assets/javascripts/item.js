@@ -81,7 +81,11 @@ $(document).on('turbolinks:load', ()=> {
       }
     })
   })
-
+  $(".item-image-title-box-input").on("click",function() {
+    console.log("test")
+    const test = $(".js-file:last");
+    test.trigger("click");
+  })
 
 
 });
