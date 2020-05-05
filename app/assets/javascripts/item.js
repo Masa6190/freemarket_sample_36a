@@ -34,8 +34,8 @@ $(document).on('turbolinks:load', ()=> {
       $('#previews').append(buildImg(targetIndex, blobUrl));
     
       // $('#image-box').append(buildFileField(index));
-      // $('label.item-image-title-box-input-1').attr("for", `item_images_attributes_${index}_image`)
-      // $('.item-image-title-box-input-1-text').text('')
+      $('label.item-image-title-box-input-1').attr("for", `item_images_attributes_${index}_image`)
+      $('.item-image-title-box-input-1-text').text('')
       // $('.js-remove').remove()
 
 
