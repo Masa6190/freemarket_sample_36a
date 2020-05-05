@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', ()=> {
   
 
   const buildImg = (index, url)=> {
-    const html = `<img data-index="${index}" image="${url}" width="100px" height="100px">`;
+    const html = `<img data-index="${index}" src="${url}" width="100px" height="100px">`;
     return html;
   }
   let fileIndex = [1,2,3,4,5,6,7,8,9,10]; 
@@ -24,16 +24,17 @@ $(document).on('turbolinks:load', ()=> {
     
     const targetIndex = $(this).parent().data('index');
     const file = e.target.files[0];
-    console.log(file)
+    // console.log(file)
     const blobUrl = window.URL.createObjectURL(file);
-    
+    // console.log(blobUrl)
+
     if (img = $(`img[data-index="${targetIndex}"]`)[0]) {
       img.setAttribute('image', blobUrl);
     } else {  // 新規画像追加の処理
       var index = $("#previews").children()["length"] + 1;
       $('#previews').append(buildImg(targetIndex, blobUrl));
-    
-      // $('#image-box').append(buildFileField(index));
+      $('#image-box').append(buildFileField(index));
+      // console.log(fileIndex);
       $('label.item-image-title-box-input-1').attr("for", `item_images_attributes_${index}_image`)
       $('.item-image-title-box-input-1-text').text('')
       // $('.js-remove').remove()
