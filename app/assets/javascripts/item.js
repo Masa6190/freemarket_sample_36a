@@ -20,7 +20,7 @@ $(document).on('turbolinks:load', ()=> {
 
   $('.hidden-destroy').hide();
 
-  $('#image-box').on('change', '.is-file', function(e) {
+  $('#image-box').on('change', '.js-file', function(e) {
     
     const targetIndex = $(this).parent().data('index');
     const file = e.target.files[0];
