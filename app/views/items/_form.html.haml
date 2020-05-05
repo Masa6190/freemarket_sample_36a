@@ -15,7 +15,7 @@
           最大10枚までアップロードできます。
         .item-image-title-box
           .item-image-title-box-input
-            #image-box              
+            #image-box  
               #previews  
                 - if @item.persisted?
                   - @item.images.each_with_index do |image, i|
@@ -23,20 +23,20 @@
               = f.label :image, class: "item-image-title-box-input-1", for: "item_test" do
                 .aa
                   = fa_icon "camera"
-              = f.fields_for :images do |i|
-                .js-file_group{ data: {index: i.index}}                   
-                  = i.file_field :image, class: "item-image-title-box-input-1-d", id: "item_test"
+              = f.fields_for :images do |image|
+                .js-file_group{ "data-index" => "#{image.index}"}                   
+                  = i.file_field :image, class: "js-file", id: "item_test"
                   %br/
                   %span.js-remove 削除
               
-              -#商品削除・編集機能実装の際に、書いたものでまだ未完成の為一旦コメントアウトしています。
-              -#   - if @item.persisted?
-              -#     = image.check_box :_destroy, data:{ index: image.index }, class: "hidden-destroy"
+              
+                 - if @item.persisted?
+                   = image.check_box :_destroy, data:{ index: image.index }, class: "hidden-destroy"
 
-              -# - if @item.persisted?
-              -#   .js-file_group{"data-index" => "#{@item.images.count}"}
-              -#     = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'item-image-title-box-input-1-d'
-              -#     .js-remove 削除
+               - if @item.persisted?
+                 .js-file_group{"data-index" => "#{@item.images.count}"}
+                   = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'js-file'
+                   .js-remove 削除
 
               .item-image-title-box-input-1-text
                 ドラックアンドドロップ
