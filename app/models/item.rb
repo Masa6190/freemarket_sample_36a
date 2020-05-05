@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   validates :category_id, :status_id, :burden_id, :area_id, :days_to_ship_id, presence: true
   validates :text, presence: true, length: { maximum: 1000 }
   validates :selling_price, presence: true, numericality: { greater_than: 300, less_than:9999999 }
-  has_many :images
+  has_many :images, dependent: :destroy
   has_one :buyer
   belongs_to :category
   belongs_to :user, optional: true
