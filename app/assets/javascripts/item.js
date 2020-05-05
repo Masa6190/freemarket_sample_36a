@@ -9,9 +9,15 @@ $(document).on('turbolinks:load', ()=> {
     return html;
   }
   
+  const dele = ()=> {
+    const html = `<div class="js-remove" id="aaaa">削除</div>
+                  </div>`;
+    return html;
+  }
 
   const buildImg = (index, url)=> {
-    const html = `<img data-index="${index}" src="${url}" width="100px" height="100px">`;
+    const html = `<img data-index="${index}" src="${url}" width="100px" height="100px" id="test">
+    <div class="js-remove">削除</div>`;
     return html;
   }
   let fileIndex = [1,2,3,4,5,6,7,8,9,10]; 
@@ -33,6 +39,7 @@ $(document).on('turbolinks:load', ()=> {
     } else {  // 新規画像追加の処理
       var index = $("#previews").children()["length"] + 1;
       $('#previews').append(buildImg(targetIndex, blobUrl));
+      // $('#test').append(dele);
       $('#image-box').append(buildFileField(index));
       // console.log(fileIndex);
       $('label.item-image-title-box-input-1').attr("for", `item_images_attributes_${index}_image`)
