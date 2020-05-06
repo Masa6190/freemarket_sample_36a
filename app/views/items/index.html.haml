@@ -1,5 +1,5 @@
 .wrapper
-  = link_to new_item_path, class: 'submit-btn-link' do
+  = link_to  new_item_path, class: 'submit-btn-link' do
     .sellbtn
       %span
         .sellbtn__text
@@ -102,21 +102,15 @@
         - @item.each do |item|
           .main5__itemlist--left
             .main5__itemlist--left--pic
+            = link_to edit_item_path(@item), class:"Edit" do
               = image_tag item.images[0].image.url, width: '230', height: '180'
-              %ul.more_list
-              
-                %li.more_list-b
-                  = link_to '削除', "/items/#{item.id}", method: :delete
-
-                
-
-            .main5__itemlist--left--name
-              = item.name
-            .main5__itemlist--left--price
-              = item.selling_price
-              円
-            .main5__itemlist--left--text
-              (税込)
+              .main5__itemlist--left--name
+                = item.name
+              .main5__itemlist--left--price
+                = item.selling_price
+                円
+              .main5__itemlist--left--text
+                (税込)
   .main6
     .main6__page
       .main6__title
