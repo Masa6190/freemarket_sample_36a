@@ -35,11 +35,12 @@
             -#   = f.label :image, class: "item-image-title-box-input-1", for: "item_test" do
             -#     .aa
             -#       = fa_icon "camera"
+            
               = f.fields_for :images do |image|
                 .js-file_group{ "data-index" => "#{image.index}"}                   
                   = i.file_field :image, class: "js-file"
                   %br/
-                  ?%span.js-remove 削除
+                  %span.js-remove 削除
               
               
                  - if @item.persisted?
