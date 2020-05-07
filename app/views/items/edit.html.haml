@@ -1,6 +1,6 @@
 .n__container
   .n__logo
-    = link_to image_tag('logo.png', :width => '170', :height => '60'), root_path
+    = link_to image_tag('/logo.png', :width => '170', :height => '60'), root_path
       
   .n__form__container
     =form_for @item do |f|
@@ -37,6 +37,8 @@
           %p.message カテゴリー（必須)
           .sell-category-box
             = f.collection_select :category_id, @category_parent_array, :id, :name, {prompt: "---"}, {class: 'sell__item-category', id: 'parent_category'}
+          %p.message ブランド (任意)
+          = f.text_field :brand, class: "brand-box", placeholder: "例) シャネル"
           %p.message 商品の状態（必須）
           = f.collection_select :status_id, Status.all, :id, :name, {}, {class: "select-box"}
         .n__post__container
@@ -63,5 +65,5 @@
         %p.message 禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
   .n__end__logo__container
     .n__end__logo__container__end__logo
-      = link_to image_tag('logo.png', :width => '170', :height => '60'), root_path
+      = link_to image_tag('/logo.png', :width => '170', :height => '60'), root_path
       %p ©️Frima.inc 
