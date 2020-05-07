@@ -29,6 +29,8 @@
           %p.message カテゴリー（必須)
           .sell-category-box
             = f.collection_select :category_id, @category_parent_array, :id, :name, {prompt: "---"}, {class: 'sell__item-category', id: 'parent_category'}
+          %p.message ブランド (任意)
+          =f.text_field :brand, class: "brand-box", placeholder: "例) シャネル"
           %p.message 商品の状態（必須）
           = f.collection_select :status_id, Status.all, :id, :name, {}, {class: "select-box"}
         .n__post__container
