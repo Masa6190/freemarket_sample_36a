@@ -61,8 +61,8 @@
           =f.submit "商品情報を編集する", class: "exhibition"
         .back
           = link_to "編集しないで戻る", item_path(@item.id)
-        .button
-          = link_to "出品商品を削除する", "/items/#{item.id}", method: :delete
+        .back
+          = link_to "出品商品を削除する", item_path(@item.id), method: :delete, class: "delete"
       .n__attention__container
         %p.message 禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
   .n__end__logo__container

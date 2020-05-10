@@ -1,5 +1,10 @@
-.contents.row
-  .success
-    %h3
-      削除が完了しました。
-    %a.btn{ :href => '/'} 投稿一覧へ戻る
+.container
+  .logo-box
+    .logo
+      = link_to image_tag('/logo.png', :width => '170', :height => '60'), root_path
+
+  .contents.row
+    .success
+      %h3
+        削除が完了しました。
+      %a.btn{ :href => '/'} 投稿一覧へ戻る
