@@ -16,7 +16,7 @@ class BuyersController < ApplicationController
 
   def pay
     if @card.blank? 
-      redirect_to new_card_path and return
+      redirect_to new_card_path, alert:'お支払い方法を登録してください' and return
     else
 
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']

@@ -8,8 +8,7 @@
       購入内容の確認
 
     .buy-main__middle
-      .buy-main__middle-image
-        = image_tag @item.images[0].image.url
+      = image_tag @item.images[0].image.url, class:"buy-main__middle-image"
       .buy-main__middle-item
         .buy-main__middle-item-name
           = @item.name

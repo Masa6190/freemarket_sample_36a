@@ -10,26 +10,38 @@
           .singup-main__container__content__form__group
             %ul.singup-main__container__content__form__group__box
               %li.singup-main__container__content__form__group__box__type
-                ニックネーム
+                = f.label :nickname, 'ニックネーム'
               %li.singup-main__container__content__form__group__box__terms
                 必須
-            = f.text_field :nickname, autofocus: true, class:"singup-main__container__content__form__group__text",placeholder:"例）メルカリ太郎"
+              %br/
+              = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "例)メルカリ太郎",class:"singup-main__container__content__form__group__text"
 
           .singup-main__container__content__form__group
             %ul.singup-main__container__content__form__group__box
               %li.singup-main__container__content__form__group__box__type
-                メールアドレス
+                = f.label :email, 'メールアドレス'
               %li.singup-main__container__content__form__group__box__terms
                 必須
-            = f.email_field :email, autofocus: true, class:"singup-main__container__content__form__group__text",placeholder:"PC・携帯どちらでも可"
+              %br/
+              = f.email_field :email, autocomplete: "email", class:"singup-main__container__content__form__group__text",placeholder:"PC・携帯どちらでも可"
 
           .singup-main__container__content__form__group
             %ul.singup-main__container__content__form__group__box
               %li.singup-main__container__content__form__group__box__type
-                パスワード
+                = f.label :password, 'パスワード'
               %li.singup-main__container__content__form__group__box__terms
                 必須
-            = f.password_field :password, autocomplete: "off", class:"singup-main__container__content__form__group__text",placeholder:"7文字以上の半角英数字"
+              %br/
+              = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上" , class:"singup-main__container__content__form__group__text"
+          
+          .singup-main__container__content__form__group
+            %ul.singup-main__container__content__form__group__box
+              %li.singup-main__container__content__form__group__box__type
+                = f.label :password_confirmation, 'パスワード（確認）'
+              %li.singup-main__container__content__form__group__box__terms
+                必須
+              %br/
+              = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "7文字以上",class:"singup-main__container__content__form__group__text"
             
           .singup-main__container__content__form__group
             .singup-main__container__content__form__group__checkbox
