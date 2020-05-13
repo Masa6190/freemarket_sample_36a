@@ -1,0 +1,31 @@
+.edit-main
+  .edit-main__container
+    %h2.edit-main__container__header
+      メール/パスワード
+    .edit-main__container__content
+      .edit-main__container__content__group
+        .label
+          メールアドレス
+        %input{type: "text",class:"edit-main__container__content__group__form"}
+        .edit-main__container__content__group__text
+          メールアドレスを変更すると確認メールが送信されます。メール内のURLをクリックすると変更完了です。
+      
+      .edit-main__container__content__group
+        .label
+          現在のパスワード
+        %input{type: "text",class:"edit-main__container__content__group__form"}
+        
+      .edit-main__container__content__group
+        .label
+          新しいパスワード
+        %input{type: "text",class:"edit-main__container__content__group__form"}
+        .edit-main__container__content__group__text
+          ※ 英字と数字の両方を含めて設定してください
+      
+      .edit-main__container__content__group
+        .label
+          新しいパスワード確認
+        %input{type: "text",class:"edit-main__container__content__group__form"}
+      
+      .edit-main__container__content__footer
+        %input{type:"submit",class:"edit-main__container__content__footer__submit-btn",value:"変更する"}

@@ -61,6 +61,7 @@
 
           &-value {
             font-size: 15px;
+            padding-top: 4px;
           }
 
           &-fee {
@@ -98,6 +99,7 @@
             width: 130px;
             font-size: 30px;
             margin-left: 32px;
+            padding-top: 4px;
           }
         }
         &-pay-method {
@@ -105,10 +107,29 @@
           padding: 40px 0 40px 0;
           border-bottom: 1px solid #f5f5f5;
 
-          &-info {
-            font-size: 14px;
+          &-form {
+            display: flex;
+            justify-content: space-between;
             font-weight: bold;
           }
+
+            &-info {
+              font-size: 14px;
+              font-weight: bold;
+            }
+
+            &-link {
+              font-size: 14px;
+              font-weight: bold;
+              text-align: right;
+            }
+
+            a {
+              text-decoration: none;
+              color: #0099E8;
+              }
+
+
 
           &-box {
             width: 343px;
@@ -119,7 +140,7 @@
 
             &--icon {
               color: #0099e8;
-              margin-top: 1px;
+              margin-top: 5px;
             }
 
             &--entry {
@@ -134,12 +155,29 @@
 
         &-address {
           width: 343px;
-          padding: 40px 0 40px 0;
+          padding: 20px 0 80px 0;
           border-bottom: 1px solid #f5f5f5;
 
           &-info {
-            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
             font-weight: bold;
+
+            &-left {
+              font-size: 14px;
+              font-weight: bold;
+            }
+
+            &-right {
+              font-size: 14px;
+              font-weight: bold;
+              text-align: right;
+            }
+
+            a {
+              text-decoration: none;
+              color: #0099E8;
+              }
           }
 
           &-box {
@@ -152,7 +190,7 @@
 
             &--icon {
               color: #0099e8;
-              margin-top: 1px;
+              margin-top: 5px;
             }
 
             &--entry {
@@ -167,7 +205,7 @@
         
         &-confirm {
           width: 343px;
-          padding-top: 25px;
+          padding-top: 15px;
 
           &-btm {
             width: 100%;
@@ -183,7 +221,6 @@
   }
 
   .buy-fotter {
-    width: 456px;
     height: 220px;
     margin: 0 auto;
     padding: 40px 0;

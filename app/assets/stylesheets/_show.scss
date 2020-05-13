@@ -1,5 +1,5 @@
 .item-detail {
-  height: 1430px;
+  height: 100hw;
   width: 100vw;
   background-color: #f8f8f8;
 }
@@ -24,15 +24,15 @@
       &__box__item-image{
         text-align: center;
         .image-main {
-          width: 600px;
+          width: 500px;
         }
       }
         &__box__item-image-sub {
           list-style: none;
           background-color: white;
           .image-sub {
-            width: 160px;
-            height: 110px;
+            width: 140px;
+            height: 140px;
           }
         }
       &__box__item-price {
@@ -53,9 +53,6 @@
         }
       }
       &__box__item-text {
-        text-align: center;
-        
-      
         &-box {
           text-align: left;
           font-size: 18px;
@@ -92,6 +89,10 @@
         td {
           padding-left: 15px;
         }
+          .nickname {
+            text-decoration: none;
+            color: #3CCACE;
+          }
           .category {
             text-decoration: none;
             color: #3CCACE;
@@ -101,37 +102,130 @@
             color: #1DC7D3;
           }
       }
-      .item-detail__nav {
-        padding-top: 5px;
+      .item-detail__buy {
+        text-align: center;
+        width: 500px;
+        height: 45px;
+        border: solid;
+        margin-left: 130px;
+        margin-bottom: 15px;
+        padding-top: 8px;
+        background-color: #1DC7D3;
+        border-color: #1DC7D3;
+        text-decoration: none;
+        .btn {
+          text-decoration: none;
+          font-size: 20px;
+          align-items: center;
+          color: white;
+          font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+        }  
       }
-        .nav {
+      .item-detail__management {
+        text-align: right;
+        .edit {
           text-decoration: none;
           color: #1DC7D3;
+          font-size: 15px;
         }
-        .nav-next {
+        .destroy {
           text-decoration: none;
           color: #1DC7D3;
-          float: right;
+          margin-right: 20px;
+          font-size: 15px;
         }
-        li {
-          list-style: none;
-          background-color: #f8f8f8;
-        }
-        .item-detail__more-navi {
-          background-color: #f8f8f8;
-          font-size: 23px;
-          font-weight: bold;
-          padding: 25px 0;
-          
-          a {
-            text-decoration: none;
+      }
+      
+
+
+      .item-detail__nav {
+        padding-top: 13px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #f8f8f8;
+      }
+        .item-detail__nav-prev {
+          .nav {
             color: #1DC7D3;
           }
+          .nav:hover{
+            text-decoration: underline;
+            color: powderblue;
+          }
         }
-  
+      
+        .item-detail__nav-next {
+          .nav-next {
+            text-decoration: none;
+            color: #1DC7D3;
+          } 
+          .nav-next:hover{
+            text-decoration: underline;
+            color: powderblue;
+          }
+        }
+
+      .more-nav {
+        background-color: #f8f8f8;
+        color: #1DC7D3;
+        font-size: 23px;
+        font-weight: bold;
+        padding-top: 15px;
+        .more {
+          color: #1DC7D3;
+        }
+      }
+        
+      .more-list {
+        display: flex;
+        background-color: #f8f8f8;
+        height: 100hw;
+      }
+        .more-list__box {
+          
+          &__item {
+            float: left;
+            text-align: center;
+            height: 320px;
+            width: 223px;
+            margin: 13px;
+            background-color: white;
+            &__text {
+              height: 100px;
+              text-align: left;
+              background-color: white;
+              
+              &-name {
+                margin-left: 15px;
+                margin-top: 10px;
+                text-decoration: none;
+                font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+                a:hover {
+                  text-decoration: underline;
+                  color: dimgray;
+                }
+              }
+                
+              &-price {
+                padding: 15px 5px;
+                margin-left: 10px;
+                font-size: 17px;
+                font-weight: bold;
+                font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+                a:hover {
+                  text-decoration: underline;
+                  color: dimgray;
+                }
+              }
+            }
+          }
+        }
+        
+
 .link {
+  clear: both;
   height: 400px;
-  background-image: url(bg-appBanner-pict.png);
+  background-image: url(/bg-appBanner-pict.png);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -156,21 +250,26 @@
       text-align: center;
     }
   }
-    .link-icon {
-      text-align: center;
-      a {
-        text-decoration: none;
-      }
-      .icon{
-        height: 60px;
-        width: 210px;
-        margin-top: 20px;
-      }
-      img:hover {
-        opacity: 0.5;
-      }
+  .link-icon {
+    
+    a {
+      text-decoration: none;
     }
-
-
+    .icon {
+      width: 260px;
+      height: 60px;
+      padding-top: 40px;
+      padding-bottom: 9px;
+    }
+    .icon-goo {
+      padding-top: 40px;
+      height: 83px;
+      width: 205px;
+    }
+    img:hover {
+      opacity: 0.5;
+    }
+  }
+    
 
 

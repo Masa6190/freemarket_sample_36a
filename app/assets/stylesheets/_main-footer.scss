@@ -1,0 +1,84 @@
+.main-fotter {
+  padding: 60px 0;
+  background: #212121;
+  color: #fff;
+  text-align: center;
+  .main-fotter_container {
+    background: #212121;
+    text-align: left;
+    width: 1020px;
+    margin: 0 auto;
+    ul {
+      padding: 0 0 30px 0;
+      .main-fotter-cell {
+        background: #212121;
+        display: inline-block;
+        width: 23%;
+        margin: 0 2% 0 0;
+        vertical-align: top;
+        box-sizing: border-box;
+        .main-fotter__header {
+          font-size: 16px;
+          font-weight: bold;
+          padding: 0 0 12px 0;
+        }
+        ul {
+          background-repeat: no-repeat;
+          margin: 0;
+          padding: 0 20px 0 0;
+          li {
+            background: #212121;
+            margin: 9px 0 0;
+            .icon-twitter{
+              margin-right: 10px;
+              font-size: 30px;
+              top: 16px;
+              left: 22px;
+              height: 22px;
+              text-align: middle;
+              color: #fff;
+              }
+            .icon-facebook{
+            font-size: 30px;
+            top: 16px;
+            left: 22px;
+            height: 22px;
+            text-align: middle;
+            color: #fff;
+            }
+            .us {
+              padding: 5px 0;
+            }
+            .jp {
+              padding: 5px 0;
+            }
+            a {
+              font-size: 12px;
+              color: #888888;
+              text-decoration: none;
+              img {
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+      .country {
+        margin: 0;
+      }
+    }
+  }
+  .main-fotter-logo{
+    &__icon {
+      padding-top: 40px;
+      img {
+      width: 124px;
+      height: 33px;
+      }
+    }
+    &__copyright {
+      font-size: 12px;
+      margin-top: 8px;
+    }
+  }
+}

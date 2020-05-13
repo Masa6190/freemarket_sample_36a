@@ -1,7 +1,7 @@
-.adress {
+.address {
   width: 700px;
   background-color: #FFFFFF;
-  .adress-container {
+  .address-container {
     &__head {
       font-size: 24px;
       padding: 7px 24px;
@@ -32,6 +32,8 @@
       }
       .select-tab{
         margin: 16px 0 0;
+        height: 40px;
+        outline: 0;
       }  
       .btn-default {
         @include btn-default

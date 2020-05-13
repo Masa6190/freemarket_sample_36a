@@ -88,3 +88,4 @@ gem 'mini_magick'
 gem 'merge_db_schema'
 gem 'active_hash'
 gem 'payjp'
+gem 'faker', "~> 2.8"

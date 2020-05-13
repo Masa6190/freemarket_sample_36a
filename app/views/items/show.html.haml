@@ -1,64 +1,106 @@
+= render partial: 'main-header'
 .item-detail
   .item-detail__top
     .item-detail__top__box
       .item-detail__top__box__item-name 
-        item
+        = @item.name
       .item-detail__top__box__item-image
-        = image_tag('/assets/cherry.png', alt: 'さくらんぼの画像', class: 'image-main')
+        = image_tag @item.images[0].image.url, class: 'image-main', size: '400x400'
         %li.item-detail__top__box__item-image-sub
-          = image_tag('/assets/cherry.png', alt: 'さくらんぼの画像', class: 'image-sub') 
-          = image_tag('/assets/fd401033.png', alt: 'りんごの画像', class: 'image-sub') 
-          = image_tag('/assets/fd401266.png', alt: 'みかんの画像', class: 'image-sub') 
+          - @item.images.each do |item|
+            = image_tag item.image.url, class: 'image-sub', size: '60x60'
       .item-detail__top__box__item-price 
         .item-detail__top__box__item-price-box
-          ¥3000
+          ¥
+          = @item.selling_price
         .item-detail__top__box__item-price-detail
           (税込) 送料込み
       .item-detail__top__box__item-text
         .item-detail__top__box__item-text-box
-          とても美味しくとろけるような甘さ。。。
-          農薬など一切使用しておらず体に害はなく
-          皮まで食べられる桃になっております。
-          今ならなんと３個セットでセール中です！
-          ぜひこの機会にお試し下さい。
+          = simple_format @item.text
       .item-detail__table
         %table
           %tbody
             %tr
               %th 出品者
-              %td hoge
+              %td
+                = link_to "#", class: "nickname" do
+                  = @item.saler.nickname
             %tr
               %th カテゴリー
               %td
-                = link_to "その他", "#", class:"category"
-                %br/
-                = link_to "食品", "#", class:"category"
-                %br/
-                = link_to "果物", "#", class:"category"
+                = link_to "#", class: "category" do
+                  = @item.category.parent.parent.name
+                %br
+                = link_to "#", class: "category" do
+                  = @item.category.parent.name
+                %br
+                = link_to "#", class: "category" do
+                  = @item.category.name
+            %tr
+              %th ブランド
+              %td
+                = @item.brand
             %tr
               %th 商品の状態
-              %td 新品/未使用
+              %td
+                = @item.status.name
             %tr
               %th 配送料の負担
-              %td 送料込み（出品者負担）
+              %td
+                = @item.burden.name
             %tr
               %th 発送元の地域
-              %td 
-                = link_to "東京都", "#", class:"area"
+              %td
+                = link_to '#', class: "area" do
+                  = @item.area.name
             %tr
               %th 発送日の目安
-              %td 2~4日で発送
+              %td
+                = @item.days_to_ship.name
+      -if user_signed_in?
+        - if current_user.id == @item.saler_id 
+          .item-detail__management
+            = link_to "商品の編集", edit_item_path, class:"edit"
+            ／
+            = link_to "この商品を削除する", item_path, method: :delete, class:"destroy"
+        - else
+          .item-detail__buy
+            =link_to "商品購入画面に進む", buyers_path(@item.id), class: "btn"
+      - else
+        .item-detail__buy
+          = link_to "ログインして購入画面に進む", new_user_session_path, class: "btn"
+        
       .item-detail__nav
-      %li
-        = link_to "< 前の商品", "#",class:"nav"
-        = link_to "後ろの商品 >", "#",class:"nav-next"
-        .item-detail__more-navi
-          = link_to "その他をもっと見る", "#"
+        - if @prev_item.present?
+          .item-detail__nav-prev
+            = link_to "< 前の商品", item_path(@prev_item), class:"nav"
+        - if @next_item.present?
+          .item-detail__nav-next
+            = link_to "後ろの商品 >", item_path(@next_item),class:"nav-next"
+            
+      .more-nav
+        = link_to "#{@item.saler.nickname}さんのその他の出品", "#", class:"more"
+      .more-list
+        .more-list__box
+          - @my_item.order('created_at DESC').limit(6).each do |my_item|
+            .more-list__box__item
+              = link_to item_path(my_item) do
+                = image_tag my_item.images[0].image.url, class: "image", size: '221x200'
+                .more-list__box__item__text
+                  .more-list__box__item__text-name
+                    = link_to item_path(my_item) do
+                      = my_item.name
+                  .more-list__box__item__text-price
+                    = link_to item_path(my_item) do
+                      ¥   
+                      = my_item.selling_price 
 .link
   %link{href: "_show.scss", rel: "stylesheet", type: "scss"}
     .link-text
       %h2 だれでもかんたん、人生を変えるフリマアプリ
       %p 今すぐ無料ダウンロード！
       .link-icon
-        = link_to image_tag("http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg", alt: "アップルストアへのリンク", class:"icon"), "#"
-        = link_to image_tag("http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg", alt: "グーグルへのリンク", class:"icon"), "#"
+        = image_tag '/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg', class:"icon"
+        = image_tag '/google-play-badge.png', class: "icon-goo", size: '200x80'
+= render partial: 'main-footer'
