@@ -13,13 +13,13 @@
               .address-container__main__form
                 %label お名前
                 %span.input-required 必須
-                = f.text_field :familyname, class: "input-default", placeholder: "例) 山田"
-                = f.text_field :firstname, class: "input-default", placeholder: "例) 太郎" 
+                = f.text_field :familyname, class: "input-default", placeholder: "例) 山田   ※全角で入力して下さい"
+                = f.text_field :firstname, class: "input-default", placeholder: "例) 太郎   ※全角で入力して下さい" 
               .address-container__main__form
                 %label お名前カナ
                 %span.input-required 必須
-                = f.text_field :familyname_kana, class: "input-default", placeholder: "例) ヤマダ"
-                = f.text_field :firstname_kana, class: "input-default", placeholder: "例) タロウ"
+                = f.text_field :familyname_kana, class: "input-default", placeholder: "例) ヤマダ   ※全角カタカナで入力して下さい"
+                = f.text_field :firstname_kana, class: "input-default", placeholder: "例) タロウ   ※全角カタカナで入力して下さい"
               .address-container__main__form
                 %label{for: "birthday"} 生年月日
                 %span.input-required 必須
