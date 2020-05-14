@@ -9,19 +9,7 @@ a:hover {
   color: blue;
 }
 
-.sellbtn {
-  position: fixed;
-  top: 79%;
-  left: 90%;
-  height: 120px;
-  width: 120px;
-  z-index: 1;
-  background-color: #3CCACE;
-  text-align: center;
-  line-height: 2.3;
-  border-radius: 4%;
-  color: white;
-}
+
 
 .main__page {
   padding: 220px 60px;
@@ -292,6 +280,7 @@ a:hover {
         }
         
         &--name {
+          width: 200px;
           padding-left: 20px;
           text-align: left;
           overflow: hidden;

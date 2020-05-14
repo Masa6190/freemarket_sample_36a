@@ -1,7 +1,22 @@
 = render partial: 'main-header'
+= render partial: 'items/item-btn'
 .item-detail
   .item-detail__top
     .item-detail__top__box
+      = link_to  root_path, class: 'submit-btn-link' do
+        FURIMA
+      %span　>　
+      = link_to  root_path, class: 'submit-btn-link' do
+        = @item.category.parent.parent.name
+      %span　>　
+      = link_to  root_path, class: 'submit-btn-link' do 
+        = @item.category.parent.name
+      %span　>　
+      = link_to  root_path, class: 'submit-btn-link' do
+        = @item.category.name
+      %span　>　
+      = link_to  root_path, class: 'submit-btn-link' do
+        = @item.name
       .item-detail__top__box__item-name 
         = @item.name
       .item-detail__top__box__item-image
