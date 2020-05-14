@@ -64,5 +64,18 @@ describe User do
       user.valid?
       expect(user.errors[:email]).to include("is invalid")
     end
+
+    # 8
+    it "passwordとpassword_confirmationが一致していると登録できる " do
+      user = build(:user, password: "a123456", password_confirmation: "a123456")
+      user.valid?
+      expect(user).to be_valid
+    end
+
+    it "passwordとpassword_confirmationが一致していないと登録できない " do
+      user = build(:user, password: "a123456", password_confirmation: "b987654")
+      user.valid?
+      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+    end
   end
 end

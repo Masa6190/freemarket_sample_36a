@@ -23,12 +23,22 @@
               .address-container__main__form
                 %label{for: "birthday"} 生年月日
                 %span.input-required 必須
-
                 .form-group-tab
                 = f.collection_select :birth_year, BirthYyyy.all, :id, :year, {}, class: "select-tab"
                 = f.collection_select :birth_month, BirthMm.all, :id, :month, {}, class: "select-tab"
                 = f.collection_select :birth_day, BirthDd.all, :id, :day, {}, class: "select-tab"
                 -# = f.date_select :birth_year, start_year: 1940, end_year: Time.current.year, use_month_numbers: true
+
+              .address-container__main__form
+                %label 商品送付先氏名
+                %span.input-required 必須
+                = f.text_field :familyname_deliver, class: "input-default", placeholder: "例) 山田   ※全角で入力して下さい"
+                = f.text_field :firstname_deliver, class: "input-default", placeholder: "例) 太郎   ※全角で入力して下さい" 
+              .address-container__main__form
+                %label 商品送付先氏名カナ
+                %span.input-required 必須
+                = f.text_field :familyname_deliver_kana, class: "input-default", placeholder: "例) ヤマダ   ※全角カタカナで入力して下さい"
+                = f.text_field :firstname_deliver_kana, class: "input-default", placeholder: "例) タロウ   ※全角カタカナで入力して下さい"
               .address-container__main__form
                 %label{for: "zip_code"} 郵便番号
                 %span.input-required 必須
@@ -60,5 +70,4 @@
               .address-container__main__button
               =f.submit "登録する", class: "btn-default"
 
-
-  -# = render "layouts/footer"
+  = render 'items/main-footer'
