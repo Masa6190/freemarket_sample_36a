@@ -30,6 +30,7 @@ class BuyersController < ApplicationController
   end
 
   def done
+    Buyer.create!(user_id: current_user.id, item_id: @item.id)
   end
 
   private

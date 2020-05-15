@@ -1,5 +1,13 @@
 ja:
   activerecord:
+    errors:
+      models:
+        buyer:
+          attributes:
+            user:
+              blank: ユーザー情報は空です
+            item:
+              blank: 商品情報は空です
     attributes:
       user:
         confirmation_sent_at: パスワード確認送信時刻
