@@ -12,28 +12,28 @@ describe User do
     it "nicknameがない場合は登録できないこと" do
       user = build(:user, nickname: nil)
       user.valid?
-      expect(user.errors[:nickname]).to include("can't be blank")
+      expect(user.errors[:nickname]).to include("を入力してください")
     end
 
     # 3
     it "emailがない場合は登録できないこと" do
       user = build(:user, email: nil)
       user.valid?
-      expect(user.errors[:email]).to include("can't be blank")
+      expect(user.errors[:email]).to include("を入力してください")
     end
 
     # 4
     it "encrypted_passwordがない場合は登録できないこと" do
       user = build(:user, encrypted_password: nil)
       user.valid?
-      expect(user.errors[:encrypted_password]).to include("can't be blank")
+      expect(user.errors[:encrypted_password]).to include("を入力してください")
     end
 
     # 5
     it "encrypted_passwordが6文字以下では登録できないこと" do
       user = build(:user, encrypted_password: "123456")
       user.valid?
-      expect(user.errors[:encrypted_password]).to include("is too short (minimum is 7 characters)")
+      expect(user.errors[:encrypted_password]).to include("は7文字以上で入力してください")
     end
 
     it "encrypted_passwordが7文字以上で登録できること" do
@@ -49,20 +49,20 @@ describe User do
       #先に登録したユーザーと同じemailの値をもつユーザーのインスタンスを作成
       another_user = build(:user)
       another_user.valid?
-      expect(another_user.errors[:email]).to include("has already been taken")
+      expect(another_user.errors[:email]).to include("はすでに存在します")
     end
 
     # 7
     it "emailに＠が含まれていないと登録できない" do
       user = build(:user, email: "aaaagmail.com")
       user.valid?
-      expect(user.errors[:email]).to include("is invalid")
+      expect(user.errors[:email]).to include("は不正な値です")
     end
 
     it "emailにドメインが含まれていないと登録できない" do
       user = build(:user, email: "aaaa@")
       user.valid?
-      expect(user.errors[:email]).to include("is invalid")
+      expect(user.errors[:email]).to include("は不正な値です")
     end
 
     # 8
@@ -75,7 +75,7 @@ describe User do
     it "passwordとpassword_confirmationが一致していないと登録できない " do
       user = build(:user, password: "a123456", password_confirmation: "b987654")
       user.valid?
-      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+      expect(user.errors[:password_confirmation]).to include("とパスワードの入力が一致しません")
     end
   end
 end

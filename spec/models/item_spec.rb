@@ -12,59 +12,59 @@ describe Item do
     it "nameがない場合は登録できないこと" do
       item = build(:item, name: nil)
       item.valid?
-      expect(item.errors[:name]).to include("can't be blank")
+      expect(item.errors[:name]).to include("を入力してください")
     end
 
     # 3
     it "textがない場合は登録できないこと" do
       item = build(:item, text: nil)
       item.valid?
-      expect(item.errors[:text]).to include("can't be blank")
+      expect(item.errors[:text]).to include("を入力してください")
     end
 
     # 4
     it "category_idがない場合は登録できないこと" do
       item = build(:item, category_id: nil)
       item.valid?
-      expect(item.errors[:category_id]).to include("can't be blank")
+      expect(item.errors[:category_id]).to include("を入力してください")
     end
 
     # 5
     it "status_idがない場合は登録できないこと" do
       item = build(:item, status_id: nil)
       item.valid?
-      expect(item.errors[:status_id]).to include("can't be blank")
+      expect(item.errors[:status_id]).to include("を入力してください")
     end
     # 6
     it "area_idがない場合は登録できないこと" do
       item = build(:item, area_id: nil)
       item.valid?
-      expect(item.errors[:area_id]).to include("can't be blank")
+      expect(item.errors[:area_id]).to include("を入力してください")
     end
     # 7
     it "burden_idがない場合は登録できないこと" do
       item = build(:item, burden_id: nil)
       item.valid?
-      expect(item.errors[:burden_id]).to include("can't be blank")
+      expect(item.errors[:burden_id]).to include("を入力してください")
     end
     # 8
     it "days_to_ship_idがない場合は登録できないこと" do
       item = build(:item, days_to_ship_id: nil)
       item.valid?
-      expect(item.errors[:days_to_ship_id]).to include("can't be blank")
+      expect(item.errors[:days_to_ship_id]).to include("を入力してください")
     end
     # 9
     it "selling_priceがない場合は登録できないこと" do
       item = build(:item, selling_price: nil)
       item.valid?
-      expect(item.errors[:selling_price]).to include("can't be blank")
+      expect(item.errors[:selling_price]).to include("を入力してください")
     end
 
     # 10
     it " nameが41文字以上であれば登録できないこと" do
       item = build(:item, name: "aaaaaaaaaabbbbbcbbbbbccccccccccdddddddddde")
       item.valid?
-      expect(item.errors[:name]).to include("is too long (maximum is 40 characters)")
+      expect(item.errors[:name]).to include("は40文字以内で入力してください")
     end
 
     # 11
@@ -86,13 +86,13 @@ describe Item do
     it "selling_priceが300以下では登録できない " do
       item = build(:item, selling_price: "200")
       item.valid?
-      expect(item.errors[:selling_price]).to include("must be greater than 299")
+      expect(item.errors[:selling_price]).to include("は299より大きい値にしてください")
     end
     # 15
     it "saler_idが空では登録できない " do
       item = build(:item, saler_id: "")
       item.valid?
-      expect(item.errors[:saler_id]).to include("can't be blank")
+      expect(item.errors[:saler_id]).to include("を入力してください")
     end
 
   end
