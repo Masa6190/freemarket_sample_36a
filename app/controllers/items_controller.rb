@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:edit]
   before_action :set_item, only: [:show, :edit, :update]
-  before_action :move_to_root, only: [:new]
+  before_action :move_to_root, only: [:new, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
   before_action :user_address, only: [:new]
 
@@ -63,7 +63,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @items = Item.search(params[:search])
+    @items = Item.search(params[:search]).order(id: "DESC")
   end
 
   def lady
