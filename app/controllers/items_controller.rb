@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:edit]
   before_action :set_item, only: [:show, :edit, :update]
-  before_action :move_to_root, except: [:index, :show, :top]
+  before_action :move_to_root, only: [:new]
   before_action :correct_user, only: [:edit, :update]
   before_action :user_address, only: [:new]
 
