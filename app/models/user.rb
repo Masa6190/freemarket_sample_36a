@@ -8,7 +8,8 @@ class User < ApplicationRecord
 
          validates :nickname, presence: true
          validates :email, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
-         validates :encrypted_password, presence: true, length:  { minimum: 7 }
+         validates :password, presence: true
+         validates :password_confirmation, presence: true
 
   has_many :items
   has_many :buyers

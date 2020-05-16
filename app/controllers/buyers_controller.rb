@@ -1,7 +1,7 @@
 class BuyersController < ApplicationController
 
   require 'payjp' #Payjpの読み込み
-  before_action :authenticate_user!, :set_card, :set_item, :set_address
+  before_action :authenticate_user!, :set_card, :set_item, 
 
   def index
     if @card.blank?
@@ -37,10 +37,6 @@ class BuyersController < ApplicationController
 
   def set_card
     @card = Card.find_by(user_id: current_user.id)   #カードテーブルからpayjpの顧客IDを検索
-  end
-
-  def set_address
-    @address = Address.find_by(id: current_user.id)  #アドレステーブルからIDを検索
   end
 
   def set_item

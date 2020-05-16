@@ -3,7 +3,7 @@ require 'rails_helper'
 describe User do
   describe '#create' do
     # 1
-    it "nickname,email,encrypted_passwordが存在すれば登録できること" do
+    it "nickname,email,passwordが存在すれば登録できること" do
       user = build(:user)
       expect(user).to be_valid
     end
@@ -23,21 +23,21 @@ describe User do
     end
 
     # 4
-    it "encrypted_passwordがない場合は登録できないこと" do
-      user = build(:user, encrypted_password: nil)
+    it "passwordがない場合は登録できないこと" do
+      user = build(:user, password: nil)
       user.valid?
-      expect(user.errors[:encrypted_password]).to include("を入力してください")
+      expect(user.errors[:password]).to include("を入力してください")
     end
 
     # 5
-    it "encrypted_passwordが6文字以下では登録できないこと" do
-      user = build(:user, encrypted_password: "123456")
+    it "passwordが6文字以下では登録できないこと" do
+      user = build(:user, password: "123456",password_confirmation:"123456")
       user.valid?
-      expect(user.errors[:encrypted_password]).to include("は7文字以上で入力してください")
+      expect(user.errors[:password]).to include("は7文字以上で入力してください")
     end
 
-    it "encrypted_passwordが7文字以上で登録できること" do
-      user = build(:user, encrypted_password: "1234567")
+    it "passwordが7文字以上で登録できること" do
+      user = build(:user, password: "1234567",password_confirmation:"1234567")
       user.valid?
       expect(user).to be_valid
     end

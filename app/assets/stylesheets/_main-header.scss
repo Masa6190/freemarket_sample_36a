@@ -26,8 +26,8 @@
       a {
         color: black;
       }
-      input {
-        width: 100%;
+      #search {
+        width: 90%;
         height: 36px;
         padding: 9px 32px 9px 8px;
         background: #fafafa;
@@ -35,14 +35,19 @@
         box-sizing: border-box;
         border: 1px solid #ccc;
       }
-      i {
+      #sbtn {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 0px;
+        right: 0px;
         width: 36px;
-        line-height: 36px;
+        height: 36px;
+        border: 0;
         cursor: pointer;
-        text-align: center;
+        background-color: #3CCACE;
+        color: white;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ffffff;
       }
 
       }
@@ -121,4 +126,14 @@
       }
     }
   }
+}
+
+.btn-primary {
+  position: absolute;
+  top: 0px;
+  right: 19px;
+  width: 0px;
+  height: 0px;
+  border: 0;
+  
 }

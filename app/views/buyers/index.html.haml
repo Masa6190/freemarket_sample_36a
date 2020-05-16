@@ -49,22 +49,14 @@
             .buy-main__bottom-form-address-info-left
               配送先
             .buy-main__bottom-form-address-info-right
-              -# = link_to "変更する",new_address_path, class:"buy-main__bottom-form-address-info-right--update" 
-              -# マイページで変更できるようになれば作成する。
 
           .buy-main__bottom-form-address-box
-            - if @address.blank? 
-              = fa_icon "plus-circle", class: "buy-main__bottom-form-address-box--icon" 
-              = link_to "登録して下さい", new_address_path, class:"buy-main__bottom-form-address-box--entry"
-              %br
-            - else
-              = "〒#{@address.postal_code.to_s}"
-              %br
-              = @address.prefecture
-              %br
-              = @address.city
-              %br
-              = @address.block
+            %br
+            東京都
+            %br
+            中央区
+            %br
+            日本橋１−１−１
 
         .buy-main__bottom-form-confirm
           = form_tag(action: :pay, method: :post) do

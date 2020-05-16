@@ -62,6 +62,15 @@ class ItemsController < ApplicationController
     item.destroy
   end
 
+  def search
+    @items = Item.search(params[:search])
+  end
+
+  def lady
+    @items = Item.where(category: 1..199)
+  end
+
+
   
   private
 
@@ -90,6 +99,5 @@ class ItemsController < ApplicationController
   def user_address
     redirect_to root_path, alert:"出品するためには本人情報の登録が必要です" if @current_user.address.blank?
   end
-
 
 end

@@ -1,0 +1,48 @@
+.search {
+  padding: 20px;
+  background-color: #EEEEEE;
+  height: 100％;
+  margin: auto;
+  text-align: center;
+  
+  &-list {
+    margin-bottom: 10px;
+
+    &-box {
+      margin: auto;
+      padding: 10px;
+      width: 700px;
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+
+      &-left {
+        
+        &-pic {
+
+        }
+        
+        &-price {
+
+        }
+      }
+
+      &-right {
+        width: 500px;
+        text-align: left;
+
+        &-name {
+          width: 500px;
+          height: 50px;
+          text-overflow: ellipsis;
+
+        }
+
+        &-text {
+          width: 500px;
+
+        }
+      }
+    }
+  }
+}

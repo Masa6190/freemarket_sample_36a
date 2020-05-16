@@ -1,0 +1,25 @@
+.wrapper
+  = render partial: 'items/item-btn'
+  = render partial: 'items/main-header'
+
+  .search
+    検索結果
+    - @items.each do |item|
+      .search-list
+        %ul.search-list-box
+          %li.search-list-box-left
+            = link_to item_path(item.id), class:"search-show" do
+              .search-list-box-left-pic
+                = image_tag item.images[0].image.url, width: '100', height:'100'
+              .search-list-box-left-price
+                ¥
+                = item.selling_price
+                （税込）
+          %li.search-list-box-right
+            = link_to item_path(item.id), class:"search-show" do
+              .search-list-box-right-name
+                商品名：
+                = item.name
+              .search-list-box-right-text
+                商品説明：
+                = item.text
