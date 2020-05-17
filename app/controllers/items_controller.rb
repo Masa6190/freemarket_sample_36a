@@ -45,6 +45,12 @@ class ItemsController < ApplicationController
 
   def edit
     @category_parent_array = Category.where(ancestry: nil)
+    @grandchild_category = @item.category
+    @child_category = @item.category.parent
+    @parent_category = @item.category.root
+
+    @child = @parent_category.children
+    @grandchild = @child_category.children
   end
 
 
