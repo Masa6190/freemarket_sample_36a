@@ -58,8 +58,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to item_path(@item.id), notice: "編集しました"
     else
-      flash.now[:alert] = "編集できません。入力必須項目を確認してください"
-      render :edit
+      redirect_to edit_item_path, alert: "編集できません。入力必須項目を確認してください"
     end
   end
 
