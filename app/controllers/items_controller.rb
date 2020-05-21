@@ -38,8 +38,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to root_path, notice: "出品しました"
     else
-      flash.now[:alert] = "出品できません。入力必須項目を確認してください"
-      render :new
+      redirect_to new_item_path, alert: "出品できません。入力必須項目を確認してください"
     end
   end
 
